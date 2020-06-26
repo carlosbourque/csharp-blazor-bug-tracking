@@ -12,19 +12,16 @@
         </tr>
     </thead>
 
-    <tbody>
+    @foreach (var bug in Bugs)
+    {
+        <tr>
 
-        @foreach (var bug in Bugs)
-        {
-            <tr>
-
-                <td>@bug.Id</td>
-                <td>@bug.Title</td>
-                <td>@bug.Description</td>
-                <td>@bug.Priority</td>
-            </tr>
-        }
-    </tbody>
+            <td>@bug.Id</td>
+            <td>@bug.Title</td>
+            <td>@bug.Description</td>
+            <td>@bug.Priority</td>
+        </tr>
+    }
 </table>
 
 @code {
